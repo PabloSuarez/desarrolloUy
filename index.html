@@ -1,94 +1,104 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="DesarrolloUy, desarrollo de software, sitios/paginas web, aplicaciones y sistemas." />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="shortcut icon" href="img/favicon.ico"> 
-	<link rel="stylesheet" href="css/main.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			setTimeout( function(){
-				$("body").addClass("loaded");
-			}, 30);
-		});
-	</script>
-	<title>DesarrolloUy * Desarrollo - Programación - Diseño</title>
+	<meta charset="UTF-8"/>
+	<title>DesarrolloUy</title>
+	<link rel="shortcut icon" href="img/Pablo_Suarez.ico"/>
+	<meta name="description" content="DesarrolloUy web site responsive, Pablo Suarez" />
+	<meta name="keywords" content="web, responsive, desarrollo, programador, frontend, Pablo Suarez, desarrolloUy.com"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" href="./css/style.compiled.css"/>
+	<link rel="stylesheet" href="./css/normalize.min.css"/>
 </head>
 <body>
-	<header>
-		<div class="header-follow">
-			<ul>
-				<ol>
-					<a class="header-follow-a" href="https://github.com/PabloSuarez" target="_blank">
-						<img src="img/github.png" alt="github"/>
-					</a>
-					<a class="header-follow-a" href="https://twitter.com/SoyPabloSuarez" target="_blank">
-						<img src="img/twitter.png" alt="twitter"/>
-					</a>
-					<a class="header-follow-a" href="https://www.facebook.com/DesarrolloUy" target="_blank">
-						<img src="img/facebook.png" alt="facebook"/>
-					</a>
-					<a class="header-follow-a" href="https://uy.linkedin.com/in/pablosuarezdesarrolloy" target="_blank">
-						<img src="img/linkedin.png" alt="linkedin"/>
-					</a>
-				</ol>
-			</ul>
+
+	<!-- menu -->
+	<nav class="actions">
+		<ul class="mobile_only menu menu_mobile flex_container">
+			<li class="js-menu-mobile menu_item menu_item-left">MENU</li>
+		</ul>
+		<ul id="js-menu-items" class="menu flex_container flex_container-flex-wrap mobile_no">
+			<li class="js-menu menu_item clickable" id="index">Inicio</li>
+			<li class="js-menu menu_item clickable" id="github">GitHub</li>
+			<li class="js-menu menu_item clickable" id="aboutme">Info</li>
+		</ul>
+	</nav>
+
+	<!-- main title -->
+	<div class="presentation">
+		<div class="presentation_title">
+			<h1>DesarrolloUy.com</h1>
 		</div>
-		<div id="logo-container">
-			<div id="logo"><a href="http://desarrollouy.com/">DesarrolloUy</a></div>
-			<div class="logoimg"></div>
-			<div id="subtitle">Startup Uruguaya dedicada al software, brindamos una excelente atención a nuestros clientes con un alto compromiso en nuestros proyectos. </div>
-		</div>
-	</header>
-	<div id="content">
-		<section class="intro">
-			<h1>Hola, <span class="nl"></span>queremos ayudarte.</h1>
-			<p>
-				Somos una empresa joven emprendedora que nos dedicamos a crear soluciones para distintos rubros del mercado local, tenemos experiencia desarrollando aplicaciones web y de escritorio con distintos usos como pueden ser comerciales, administrativos, financieros y de producción.
-			</p>
-		</section>
-
-		<section class="row">
-			<div class="col-full">
-				<h2>De Uruguay al mundo</h2>
-				<p>
-					Ademas de trabajar en el mercado local, tenemos experiencia con clientes extranjeros de forma freelance. Esta es una forma de trabajo muy flexible tanto para el cliente como para el desarrollador.
-				</p>
-			</div>
-		</section>
-
-		<section class="row">
-			<div class="photo-grid">
-				<a href="img/desarrolloUy-2.jpg" rel="lightbox" class="col-2"><img src="img/desarrolloUy-2.jpg" alt="DesarrolloUy desarrollo de software"></a>
-				<a href="img/desarrolloUy-3.jpg" rel="lightbox" class="col-2"><img src="img/desarrolloUy-3.jpg" alt="DesarrolloUy desarrollo de software"></a>
-				<a href="img/desarrolloUy-1.jpg" rel="lightbox" class="col-1"><img src="img/desarrolloUy-1.jpg" alt="DesarrolloUy desarrollo de software"></a>
-			</div>
-		</section>
-
-		<section class="row">
-			<div class="col">
-				<h2>Contacto</h2>
-				<p>
-					¿Desea coordinar una visita? contáctenos mediante: <a href="mailto:HostSuarezPablo@gmail.com">HostSuarezPablo@gmail.com</a>
-					<br>
-					<a href="#">+598 093 914 909</a>
-				</p>
-			</div>
-		</section>
-
-		<section class="row">
-			<div class="col-full">
-				<p>
-					© 2015 - made for DesarrolloUy</a>.
-				</p>
-			</div>
-		</section>
-
 	</div>
+
+	<!-- desarrolloUy -->
+	<div id="js-slider" class="flex_container flex_container-flex-center flex_container-flex-wrap">
+		<div class="lienzo">
+			<div class="slider">
+				<div class="responsive slider_item">
+					<div class="responsive_title">
+						<h2>Full Web Responsive</h2>
+						<h4>una única web que se adaptan a cada pantalla</h4>
+					</div>
+					<img src="./img/responsive_4.png" alt="" class="img_center responsive_img">
+					<p class="slider_text">* Web Responsive ya no es una innovación sino obligación, tu web se debe ver en todos los dispositivos, google castiga en su posicionamiento a las web que no son responsive.</p>
+				</div>
+				<div class="responsive slider_item">
+					<div class="responsive_title">
+						<h2>HTML + CSS + JS</h2>
+						<h4>utilizamos las mejores tecnologías</h4>
+					</div>
+					<img src="./img/html-css-js.png" alt="" class="img_center responsive_img"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- sections -->
+	<div id="js-main" class="flex_container lienzo flex_container-flex-direction-column">
+		<div class="js-aside-content flex_container hidden">
+			<aside class="aside">
+				<div align="center">
+					<img class="aside_img_profile" src="./img/Pablo_Suarez.jpeg" alt="Imagen de perfil Pablo Suarez">
+				</div>
+				<!-- <h1 class="aside_title">Bienvenido !</h1> -->
+				<div class="aside_info">
+					<h4 class="aside_username">Pablo Suarez</h4>
+					<div class="aside_border mobile_no"></div>
+					<a class="aside_social_link" href="https://uy.linkedin.com/in/pablosuarezdesarrolloy" target="_blank" alt="Perfil Linkedin">Linkedin</a>
+					<a class="aside_social_link" href="https://github.com/PabloSuarez" target="_blank" alt="Perfil Github">Github</a>
+					<a class="aside_social_link" href="https://www.facebook.com/DesarrolloUy" target="_blank" alt="Perfil Facebook">Facebook</a>
+					<a class="aside_social_link" href="mailto:hostsuarezpablo@gmail.com" alt="Cuenta correo">hostsuarezpablo@gmail.com</a>
+				</div>
+			</aside>
+		</div>
+
+		<div id="js-main-content" class="flex_container">
+			<section class="js-aboutme-content section_content about_me hidden">
+				<header><h2>Sobre desarrolloUy</h2></header>
+ 				<p>Soy Pablo Suarez el creador de desarrolloUy, vivo en <span class="view_map clickable js-las-piedas">Las Piedras ciudad de Canelones, Uruguay.</span></p>
+				<div class="map_main hidden">
+					<div class="map_container" id="map-canvas"></div>
+				</div>
+				<p>Un informático por pasión, hobby y profesión.
+				Hace 4 años trabajo como programador participando en sistemas varios como: Erp`s, financieros, de producción, home banking, entre otros.</p>
+			</section>
+
+			<section class="js-aboutme-content section_content about_me hidden">
+				<header><h3>En desarrolloUy</h3></header>
+				<p>Somos una empresa joven emprendedora que nos dedicamos a crear soluciones para distintos rubros del mercado local, tenemos experiencia desarrollando aplicaciones web y de escritorio con distintos usos como pueden ser comerciales, administrativos, financieros y de producción.</p>
+			</section>
+
+			<section class="js-github-content section_content section_content-github hidden">
+				<header><h2>Mis repositorios</h2></header>
+				<div class="js-container-repositories"></div>
+			</section>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+	<script src="./js/main.compiled.js"></script>
 </body>
 </html>
