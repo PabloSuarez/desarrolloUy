@@ -1,0 +1,27 @@
+{
+  "name": "desarrollouy",
+  "version": "1.0.0",
+  "description": "Website about develop and design web",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloSuarez/desarrolloUy.git"
+  },
+  "keywords": [
+    "angular",
+    "node",
+    "npm",
+    "js",
+    "javascript",
+    "Uruguay",
+    "desarrollouy",
+    "Pablo Suarez"
+  ],
+  "author": "Pablo Suarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PabloSuarez/desarrolloUy/issues"
+  },
+  "homepage": "https://github.com/PabloSuarez/desarrolloUy#readme"
+}
