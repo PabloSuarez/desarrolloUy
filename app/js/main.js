@@ -1,4 +1,4 @@
-// babel -w main.js --out-file ../../js/main.compiled.js
+// babel -c -w main.js --out-file ../../js/main.compiled.js
 
 /*
 * eventos MENÚ mobile
@@ -48,6 +48,7 @@ $('.js-menu').on('click',(e) => {
 	var id = e.target.id
 	var element = $('#'+id)
 	var main = '#js-main';
+	if(id === 'github') leoRepositorios()
 	mostrarSectionContent('.js-'+id+'-content');
 
 	// Si no es el inicio cargo el aside
@@ -131,9 +132,9 @@ function getPromise (url) {
 }
 
 function getPromiseCache(url) {
-	if(localStorage[url]){
+	if(sessionStorage[url]){
 		// paso a JSON
-		let datos = JSON.parse(localStorage[url])
+		let datos = JSON.parse(sessionStorage[url])
 		return Promise.resolve(datos)
 	}
 	return Promise.resolve($.get(url))
@@ -142,7 +143,7 @@ function getPromiseCache(url) {
 		// paso el objeto a string
 		// console.log(datos)
 		datos = JSON.stringify(datos)
-		localStorage[url] = datos
+		sessionStorage[url] = datos
 		return Promise.resolve(data)
 	})
 }
@@ -184,6 +185,8 @@ function cargoRepositorios (data) {
 		</li>
 	</ul>`
 
+	$('.js-container-repositories').html('');
+
 	for (let repo of data) {
 		let repoAppned = repositorio
 		repoAppned = repoAppned.replace('BRANCH-URL', repo.html_url)
@@ -197,13 +200,4 @@ function cargoRepositorios (data) {
 	}
 }
 /* final REPOS desde GITHUB */
-
-
-
-
-$(document).ready(function(){
-	leoRepositorios();
-})
-
-
 
