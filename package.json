@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/PabloSuarez/desarrolloUy/issues"
   },
-  "homepage": "https://github.com/PabloSuarez/desarrolloUy#readme"
+  "homepage": "https://github.com/PabloSuarez/desarrolloUy#readme",
+  "dependencies": {
+    "angular": "^1.4.5"
+  },
+  "devDependencies": {
+    "stylus": "^0.52.0"
+  }
 }
