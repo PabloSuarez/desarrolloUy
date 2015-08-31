@@ -1,0 +1,24 @@
+<section class="js-github-content section_content section_content-github">
+	<header><h2>Mis repositorios</h2></header>
+	<div class="js-container-repositories">
+		<ul ng-repeat="repo in repositories" id="list_repositories_item" class="list">
+			<li class="list_item">
+				<div class="list_item_head">
+					<div class="list_item_head_page flex_container flex_container-flex-space-between flex_container-flex-direction-row">
+						<a class="list_item_head_page_link" href="{{repo.html_url}}" target="_blank">
+							<div class="list_item_head_title">{{repo.name}}</div>
+						</a>
+						<div class="list_item_date">{{repo.updated_at}}</div>
+					</div>
+					<div class="">{{repo.description}}</div>
+				</div>
+				<div class="list_item_body">
+					<div class="list_item_body_clone">git clone {{repo.clone_url}}</div>
+					<div class="list_item_body_demo">
+						<a class="list_item_body_demo link" target="_blank" href="{{repo.homepage}}">Ver web</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
