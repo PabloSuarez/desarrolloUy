@@ -1,8 +1,15 @@
+<!-- main title -->
+<div class="presentation">
+	<div class="presentation_title">
+		<h1>DesarrolloUy.com</h1>
+	</div>
+</div>
+
 <section class="js-github-content section_content section_content-github">
 	<header><h2>Mis repositorios</h2></header>
 	<div class="js-container-repositories">
-		<ul ng-repeat="repo in repositories" id="list_repositories_item" class="list">
-			<li class="list_item">
+		<ul id="list_repositories_item" class="list">
+			<li ng-repeat="repo in repositories" class="list_item">
 				<div class="list_item_head">
 					<div class="list_item_head_page flex_container flex_container-flex-space-between flex_container-flex-direction-row">
 						<a class="list_item_head_page_link" href="{{repo.html_url}}" target="_blank">

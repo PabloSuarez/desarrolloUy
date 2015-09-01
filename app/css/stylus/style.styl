@@ -11,7 +11,7 @@ blanco = #fff
 gris = nav_bgc
 
 // vars de colores
-html_bgc = #4DB1F8
+html_bgc = #082A41
 
 nav_bgc = #4FA8F8
 nav_color = #fff
@@ -104,7 +104,6 @@ html
 */
 .actions
 	background-color: nav_bgc
-	// border-bottom: 1px solid nav_color_border
 
 .menu
 	list-style: none
@@ -295,19 +294,6 @@ html
 
 
 /*
-* About me
-*/
-.flex_container .section_content:nth-child(1)
-	background-color #ecb31e
-	color #3296de
-.flex_container .about_me:nth-child(2n+0)
-	background-color #dd921f
-	color blanco
-.flex_container .about_me:nth-child(3n+0)
-	background-color blanco
-
-
-/*
 * genéricos
 */
 .img_center
@@ -335,12 +321,23 @@ li
 
 .mobile_only, .tablet_only
 	display: none
-
 @media (min-width: 0px) and (max-width:mobile)
 	.mobile_only
 		display: block
 	.mobile_no
 		display: none
+
+.desktop_only
+	display none
+	@media (min-width: tablet+1)
+		&
+			display block
+
+.desktop_no
+	display block
+	@media (min-width: tablet+1)
+		&
+			display none
 
 .clickable
 	cursor: pointer
@@ -353,9 +350,6 @@ li
 	border: border_radius
 	border-top-left-radius: border_radius_conteiner
 	border-top-right-radius: border_radius_conteiner
-	@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
-		&
-			max-width: 55vw
 	& header
 		color: content_color_title
 	& h3
@@ -391,3 +385,89 @@ li
 
 
 
+
+
+
+
+/* 
+* banner
+*/
+.banner
+	position relative
+	width 100%
+	overflow auto
+	font-size 18px
+	line-height 24px
+	text-align center
+	color rgba(255,255,255,.6)
+	text-shadow 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3)
+	background #5b4d3d
+	box-shadow 0 1px 2px rgba(0,0,0,.25)
+	& p
+		color rgba(213,238,255,1)
+		font-size 1.6rem
+	& ul
+		list-style none
+		width 100%
+		& li
+			background-size cover
+			background-position center
+			display block
+			float left
+			width 33%
+			height 95vh
+			box-shadow inset 0 -3px 6px rgba(0,0,0,.1)
+	& .inner
+		padding 160px 0 110px
+	& h1
+		margin 30vh 0 0 0
+		font-size 3.5rem
+		line-height 52px
+		color rgba(255,255,255,.99)
+		@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
+			&
+				font-size 5rem
+		@media (min-width: mobile +1) and (max-width: tablet_medio_inferior)
+			&
+				font-size 3.3rem
+		@media (min-width: 0) and (max-width: mobile)
+			&
+				font-size 3rem
+	& h2
+		font-size 2rem
+		line-height 52px
+		color #fff
+	& .btn
+		display inline-block
+		margin 25px 0 0
+		padding 9px 22px 7px
+		clear both
+		color #fff
+		font-size 12px
+		font-weight bold
+		text-transform uppercase
+		text-decoration none
+		border 2px solid rgba(255,255,255,.4)
+		border-radius 5px
+		background-color rgba(156,203,255,.4)
+	& .btn:hover
+		background rgba(255,255,255,.05)
+	& .dots 
+		position absolute
+		right 0
+		bottom 20px
+		width 100%
+		& li
+			display inline-block
+			width 4px
+			height 4px
+			line-height 10px
+			margin 0 4px
+			text-indent -999em
+			border 2px solid #fff
+			cursor pointer
+			opacity .3
+			transition background .5s, opacity .5s
+			&.active
+				background #fff
+				opacity .9
