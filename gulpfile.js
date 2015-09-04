@@ -23,7 +23,6 @@ gulp.task('js:watch', function() {
   w.on('update', function (file){
     console.log('file modified, rebuilding: ', file)
     var bdle = createBundle(w)
-    console.log('rebuild finished')
     return bdle
   })
   return createBundle(w)
@@ -31,7 +30,6 @@ gulp.task('js:watch', function() {
 
 gulp.task('js', function() {
   var w = watchify(browserify(entry, args))
-  console.log('rebuild finished')
   return createPublishJS(w)
 })
 
@@ -65,7 +63,6 @@ gulp.task('styl', function styl () {
     .pipe(stylus({ use: nib() })) //inicializo stylus con nib como plugin
     .pipe(minify())
     .pipe(gulp.dest('./css'))
-  console.log('Done Styl CSS ...')
 })
 
 gulp.task('styl:watch', function() {
@@ -73,3 +70,4 @@ gulp.task('styl:watch', function() {
 })
 
 gulp.task('default', ['js:watch', 'styl:watch'])
+gulp.task('build', ['js', 'styl:watch'])
