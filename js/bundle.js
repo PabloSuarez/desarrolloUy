@@ -303,10 +303,10 @@
 
 		//  Move Unslider to a slide index
 		_.to = function(index, callback) {
-			if (_.t) {
+			if (_.o.autoplay) {
 				_.stop();
 				_.play();
-	                }
+            }
 			var o = _.o,
 				el = _.el,
 				ul = _.ul,
