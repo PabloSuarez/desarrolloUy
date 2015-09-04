@@ -1,28 +1,75 @@
 var gulp = require('gulp'),
     browserify = require('browserify'),
     watchify = require('watchify'),
-    source = require('vinyl-source-stream')
+    source = require('vinyl-source-stream'),
+  	uglify = require('gulp-uglify'),
+  	buffer = require('vinyl-buffer')
 
-var entry = './app/js/app.js' //Script de entrada
+  	// css
+var stylus = require('gulp-stylus')
+  	minify = require('gulp-minify-css')
+  	nib = require('nib')
+
+
+
+
+var entry = ['./app/js/app.js', './app/js/lib/unslider.js'] //Scripts de entrada
 var args = watchify.args
-args.debug = true //Genera el sourcemap para debuguear
+args.debug = false //Genera el sourcemap para debuguear
 args.fullPaths = false //Evita el uso de paths absolutos 
 
-var bundler = watchify(browserify(entry, args))
+gulp.task('js:watch', function() {
+  var w = watchify(browserify(entry, args))
+  w.on('update', function (file){
+    console.log('file modified, rebuilding: ', file)
+    var bdle = createBundle(w)
+    console.log('rebuild finished')
+    return bdle
+  })
+  return createBundle(w)
+})
 
-function createBundle(){
-    console.log('Now building...')
-    return bundler.bundle()
+gulp.task('js', function() {
+  var w = watchify(browserify(entry, args))
+  console.log('rebuild finished')
+  return createPublishJS(w)
+})
+
+function createPublishJS(b){
+    console.log('Now createBundle uglify ...')
+    return b.bundle()
+        .pipe(source('bundle.js')) //Nombre del bundle final
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest('./js')) //Directorio de destino
+}
+
+
+function createBundle(b){
+    console.log('Now createBundle normal...')
+    return b.bundle()
         .pipe(source('bundle.js')) //Nombre del bundle final
         .pipe(gulp.dest('./js')) //Directorio de destino
 }
 
-gulp.task('dev', createBundle)
-bundler.on('update', createBundle) //A cada modificación generamos un nuevo bundle 
 
-//Proporcionamos algo de información al generar el bundle
-bundler.on('time', function(time){ 
-	console.log('Done at ' + (time/1000))
+/*   --  -- -- --- -- -- --- -- -- --- -- -- --- -- -- --- -- -- ---  */
+
+
+/*
+ * CSS 
+ */
+gulp.task('styl', function styl () {
+  console.log('Now create Styl CSS ...')
+  return gulp.src('./app/css/stylus/style.styl') // entry point de styl
+    .pipe(stylus({ use: nib() })) //inicializo stylus con nib como plugin
+    .pipe(minify())
+    .pipe(gulp.dest('./css'))
+  console.log('Done Styl CSS ...')
 })
 
-gulp.task('default', ['dev'])
+gulp.task('styl:watch', function() {
+  return gulp.watch(['./app/css/stylus/style.styl'], ['styl'])
+})
+
+gulp.task('default', ['js:watch', 'styl:watch'])

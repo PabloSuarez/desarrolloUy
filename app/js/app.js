@@ -5,8 +5,7 @@
       filters = require('./filters'),
       services = require('./services'),
       ngStorage = require('ngstorage')
-      
-      
+
   require('angular-router-browserify')(angular)
 
   angular.module('desarrolloUy', [

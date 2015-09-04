@@ -5,7 +5,6 @@
 		.controller('GithubController', ['$scope', 'githubService', GithubController])
 		.controller('AboutController', ['$scope', AboutController])
 
-
 	function HomeController($scope) {
 		console.log('HOME controller LOG')
 	}
