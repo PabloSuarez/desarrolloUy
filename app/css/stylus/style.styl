@@ -1,9 +1,8 @@
 @import "./../normalize.css";
 @import "nib"
 
-borde_gris = #ccc
-borde_gris_claro = #eee
 blanco = #fff
+negro = #000
 gris = nav_bgc
 
 // vars de colores
@@ -100,14 +99,18 @@ html
 */
 .actions
 	background-color: nav_bgc
+	height 3vh
 
 .menu
-	list-style: none
-	margin: 0
-	padding: 0
-	color: nav_color
-	justify-content: space-around
-	flex-direction: row
+	list-style none
+	width 10vw
+	margin 0
+	padding 0
+	color nav_color
+	justify-content space-around
+	flex-direction row
+	height 100%
+	align-items center
 	@media (min-width: mobile+1) and (max-width:tablet)
 		&
 			display: flex !important
@@ -131,6 +134,32 @@ html
 	@media (min-width: mobile+1) and (max-width:tablet)
 		&
 			display: flex
+	&-x
+	    display table-cell
+		width 6vw
+		height 5.5vw
+		position absolute
+		top 0
+		background-color rgba(6, 21, 29, .2)
+		color blanco
+		text-align center
+		font-size 4vw
+		vertical-align middle
+		z-index 10000
+		text-shadow 0 1px 0 #97DBFF,
+					0 2px 0 #61C8FF,
+					0 3px 0 #3EBBFE
+		box-shadow 6px 6px 6px rgba(6, 21, 29, .1),
+				   2px 2px 2px rgba(6, 21, 29, .05)
+		&:hover
+			animation 1s slidy
+			transform rotate(90deg)
+			@keyframes slidy
+				0%
+					transform rotate(0deg)
+				100%
+					transform rotate(90deg)
+
 	&_item
 		padding: margen_nav
 		text-transform: uppercase
@@ -149,9 +178,8 @@ html
 				border-top: 0
 				text-align: center
 			&:hover
-				background-color: nav_color
-				color: nav_bgc
-
+				background-color nav_color
+				color nav_bgc
 
 
 
@@ -225,71 +253,6 @@ html
 
 
 /*
-* PRESENTATION
-*/
-.presentation
-	margin 0
-	background-color blanco
-	width 100%
-	&_title h1
-		color nav_bgc
-		font-size 4rem
-		margin 0 margen_chico
-		text-align center
-
-
-
-
-/*
-* RESPONSIVE
-*/
-@keyframes slidy
-	0%
-		left: 100%
-	5%
-		left: 0%
-	40%
-		left: 0%
-	50%
-		left: -50%
-	98%
-		left: -50%
-	99.9%
-		left: -100%
-	100%
-		left: -100%
-
-.slider
-	margin: 0
-	width: 200%
-	display: flex
-	&_item
-		width: 100%
-		margin 0 auto
-		position: relative
-		text-align: left
-		animation: 10s slidy infinite
-	&_text
-		text-align: center
-		font-family: calibri
-		color blanco
-		font-size: 1.5rem
-
-.responsive
-	&_title
-		& h2
-			margin margen 0 0 20%
-			font-size 3rem
-			color content_color_content
-		& h4
-			font-size 1.5rem
-			margin 0 0 1% 30%
-			color content_color_content
-
-
-
-
-/*
 * genéricos
 */
 .img_center
@@ -343,7 +306,7 @@ li
 	margin: margen_medio
 	background-color: content_color_background
 	padding: 0 margen_medio 0 margen_medio
-	color: #90a0b0 //content_color_content
+	color: #90a0b0
 	border: border_radius
 	border-top-left-radius: border_radius_conteiner
 	border-top-right-radius: border_radius_conteiner
@@ -355,27 +318,6 @@ li
 		background-color white
 		& h2
 			color nav_bgc
-
-.map
-	&.lienzo
-		@media (min-width: tablet+1)
-			&
-				width: 60vw
-	&_main
-		height: 300px
-		padding: 0 0 1% 0
-		position: static
-		@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
-			&
-				max-width: 55vw
-		@media (min-width: mobile +1) and (max-width: tablet_medio_inferior)
-			&
-				max-width: 86vw
-		@media (min-width: 0) and (max-width: mobile)
-			&
-				max-width: 94vw
-	&_container
-		height: 100%
 
 .view_map
 	text-decoration: underline
@@ -398,7 +340,7 @@ li
 */
 .banner
 	position relative
-	width 100%
+	width 100vw
 	overflow auto
 	font-size 18px
 	line-height 24px
@@ -410,20 +352,18 @@ li
 		font-size 1.6rem
 		text-shadow 2px 1px 1px #0A4A82
 	& ul
-		list-style none
-		width 100%
 		& li
+			height 100vh
 			background-size cover
 			background-position center
 			display block
 			float left
 			width 33%
-			height 100vh
 			box-shadow inset 0 -3px 6px rgba(0,0,0,.1)
 	& .inner
 		padding 160px 0 110px
 	& h1
-		margin 10vh 0 0 0
+		margin 30vh 0 0 0
 		font-size 3.5rem
 		line-height 52px
 		color rgba(227,242,255,1)

@@ -28,7 +28,8 @@
 			items: '>ul',   // slides container selector
 			item: '>li',    // slidable items selector
 			easing: 'swing',// easing function to use for animation
-			autoplay: true  // enable autoplay on initialisation
+			autoplay: true,  // enable autoplay on initialisation
+			mousewheel: false
 		};
 
 		_.init = function(el, o) {
@@ -85,13 +86,15 @@
 
 			//  Keypresses
 			if (o.keys) {
-				el.on('mousewheel', function(e) {
-				    if (e.originalEvent.wheelDelta >= 0) {
-				        _.prev(); // Left
-				    }else{
-				        _.next(); // Right
-				    }
-				});
+				if (o.mousewheel) {
+					el.on('mousewheel', function(e) {
+					    if (e.originalEvent.wheelDelta >= 0) {
+					        _.prev(); // Left
+					    }else{
+					        _.next(); // Right
+					    }
+					});
+				}
 
 			    el.on('keydown', function(e) {
 					switch(e.which) {
