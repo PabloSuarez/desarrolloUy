@@ -38,7 +38,7 @@ tablet = 1050px
 tablet_medio_inferior = 800px
 
 html
-	background-color: html_bgc
+	background-color: red//html_bgc
 	font-size: 13px
 	font-family: verdana !important
 
@@ -98,29 +98,24 @@ html
 * HEAD
 */
 .actions
-	width 20rem
-	z-index 1500
+	color blanco
+	width 25rem
 	position absolute
 	display flex
 	flex-direction row
-	background-color rgba(6, 21, 29, .5)
+	height 100vh
 	& .main
-		width 100%
-		color red
-		margin 2rem 1rem
+		background-color rgba(6, 21, 29, .5)
+		padding 2rem 6rem 1.5rem 1.5rem
 		& .title
 			font-size 3rem
-			color blanco
-		
+
 .menu
-	margin 2rem 0
-	color blanco
 	align-items center
 	&-x
 		width 6vw
 		height 5.5vw
-		background-color rgba(6, 21, 29, .2)
-		color blanco
+		background-color rgba(6, 21, 29, .4)
 		text-align center
 		font-size 4vw
 		vertical-align middle
@@ -139,11 +134,12 @@ html
 				100%
 					transform rotate(90deg)
 	&_item
+		color blanco
 		text-transform capitalize
 		margin 1.5rem 0
 		font-size 1.5rem
 		border-bottom 2px solid #fff
-		
+		cursor: pointer
 		&:hover
 			opacity .9
 
@@ -229,7 +225,6 @@ html
 
 .link
 	text-decoration none
-	color white
 
 ul
 	margin: 0
@@ -334,10 +329,10 @@ li
 		font-size 3.5rem
 		line-height 52px
 		color rgba(227,242,255,1)
-		text-shadow 0 .4px 0 #2995F4,
-					0 1px 0 #7DC3FF,
-					0 2px 0 #44A4F9,
-					0 3px 0 #2995F4
+		text-shadow 0 1px 0 #6CB5F4,
+					0 2px 0 #4DA1EB,
+					0 3px 0 #4F92CD,
+					0 3.5px 0 #3970A0
 		@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
 			&
 				font-size 5rem
