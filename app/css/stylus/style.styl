@@ -98,48 +98,27 @@ html
 * HEAD
 */
 .actions
-	background-color: nav_bgc
-	height 3vh
-
-.menu
-	list-style none
-	width 10vw
-	margin 0
-	padding 0
-	color nav_color
-	justify-content space-around
+	width 20rem
+	z-index 1500
+	position absolute
+	display flex
 	flex-direction row
-	height 100%
+	background-color rgba(6, 21, 29, 1)
+	& .main
+		width 100%
+		color red
+		margin 2rem 1rem
+		& .title
+			font-size 3rem
+			color blanco
+		
+.menu
+	margin 2rem 0
+	color blanco
 	align-items center
-	@media (min-width: mobile+1) and (max-width:tablet)
-		&
-			display: flex !important
-		&_mobile
-			display: none !important
-	@media (min-width: tablet+1)
-		&
-			display: flex !important
-		&_mobile
-			display: none !important
-
-	&.active
-		background-color: nav_color
-		color: nav_bgc
-	@media (min-width: 0px) and (max-width:mobile)
-		&
-			flex-direction: column
-			align-items: flex-start
-			font-size: 1.5rem
-			margin: 0 -2% 0 -2%
-	@media (min-width: mobile+1) and (max-width:tablet)
-		&
-			display: flex
 	&-x
-	    display table-cell
 		width 6vw
 		height 5.5vw
-		position absolute
-		top 0
 		background-color rgba(6, 21, 29, .2)
 		color blanco
 		text-align center
@@ -151,7 +130,7 @@ html
 					0 3px 0 #3EBBFE
 		box-shadow 6px 6px 6px rgba(6, 21, 29, .1),
 				   2px 2px 2px rgba(6, 21, 29, .05)
-		&:hover
+		& .active
 			animation 1s slidy
 			transform rotate(90deg)
 			@keyframes slidy
@@ -159,27 +138,15 @@ html
 					transform rotate(0deg)
 				100%
 					transform rotate(90deg)
-
 	&_item
-		padding: margen_nav
-		text-transform: uppercase
+		text-transform capitalize
+		margin 1.5rem 0
+		font-size 1.5rem
+		border-bottom 2px solid #fff
+		
 		&:hover
-			color: #A2D9FF
-			transform: scaleX(1.01)
-		&-left
-			text-align: start !important
-			padding: 1rem 0 1rem 4% !important
-		@media (min-width: 0px) and (max-width:mobile)
-			&
-				font-weight: bold
-				margin: 0
-				padding: 1rem 0 1rem 0
-				border-bottom: solid 1px
-				border-top: 0
-				text-align: center
-			&:hover
-				background-color nav_color
-				color nav_bgc
+			opacity .9
+
 
 
 

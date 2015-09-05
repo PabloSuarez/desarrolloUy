@@ -18,24 +18,26 @@
     // 'desarrolloUy.filters'
   ])
 
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
         controller: 'HomeController'
       })
-      .when('/github/', {
+      .when('/github', {
         templateUrl: 'views/github.html',
         controller: 'GithubController'
       })
-      .when('/info/', {
+      .when('/info', {
         templateUrl: 'views/info.html',
         controller: 'AboutController'
       })
       .otherwise({
         redirectTo: '/'
       })
+
+      $locationProvider.html5Mode(true)
 
   }])
 

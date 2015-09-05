@@ -1,14 +1,20 @@
-<!-- menu -->
-<div class="menu-x"> > </div>
-<!-- 
 <nav class="actions">
-	<ul class="mobile_only menu menu_mobile flex_container">
-		<li class="js-menu-mobile menu_item menu_item-left">MENU</li>
-	</ul>
-	<ul id="js-menu-items" class="menu flex_container flex_container-flex-wrap mobile_no hidden">
-		<li class="js-menu menu_item clickable" id="index">Inicio</li>
-		<li class="js-menu menu_item clickable" id="github">GitHub</li>
-		<li class="js-menu menu_item clickable" id="aboutme">Info</li>
-	</ul>
+	<div class="main">
+		<a href="./" class="link title">dUy</a>
+		<ul id="js-menu-items" class="menu">
+			<a href="./" class="link title"><li class="js-menu menu_item clickable" id="index">Inicio</li></a>
+			<a href="./github" class="link title"><li class="js-menu menu_item clickable" id="github">GitHub</li></a>
+			<a href="./info" class="link title"><li class="js-menu menu_item clickable" id="aboutme">Info</li></a>
+		</ul>
+	</div>
+	<!-- <div class="menu-x">></div> -->
 </nav>
- -->
+
+<script>
+	$(function() {
+		$('.menu-x').on('click', function () {
+			console.log('Entre !')
+			$('#js-menu-items').toggleClass('hidden')
+		})
+	})
+</script>
