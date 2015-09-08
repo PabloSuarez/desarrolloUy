@@ -1,0 +1,83 @@
+/* 
+* banner
+*/
+.banner
+	position relative
+	width 100vw
+	overflow auto
+	font-size 18px
+	line-height 24px
+	text-align center
+	color rgba(255,255,255,.9)
+	text-shadow 2px 2px 3px rgba(0,0,0,1)
+	box-shadow 0 1px 2px rgba(0,0,0,.25)
+	& p
+		font-size 1.6rem
+		text-shadow 2px 1px 1px #0A4A82
+	& ul
+		& li
+			height 100vh
+			background-size cover
+			background-position center
+			display block
+			float left
+			width 33%
+			box-shadow inset 0 -3px 6px rgba(0,0,0,.1)
+	& .inner
+		padding 160px 0 110px
+	& h1
+		margin 30vh 0 0 0
+		font-size 3.5rem
+		line-height 52px
+		color rgba(227,242,255,1)
+		text-shadow 0 1px 0 #6CB5F4,
+					0 2px 0 #4DA1EB,
+					0 3px 0 #4F92CD,
+					0 3.5px 0 #3970A0
+		@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
+			&
+				font-size 5rem
+		@media (min-width: mobile +1) and (max-width: tablet_medio_inferior)
+			&
+				font-size 3.3rem
+		@media (min-width: 0) and (max-width: mobile)
+			&
+				font-size 3rem
+	& h2
+		font-size 2rem
+		line-height 52px
+		color #fff
+	& .btn
+		display inline-block
+		margin 25px 0 0
+		padding 9px 22px 7px
+		clear both
+		color #fff
+		font-size 12px
+		font-weight bold
+		text-transform uppercase
+		text-decoration none
+		border 2px solid rgba(255,255,255,.4)
+		border-radius 5px
+		background-color rgba(156,203,255,.4)
+	& .btn:hover
+		background rgba(255,255,255,.05)
+	& .dots 
+		position absolute
+		right 0
+		bottom 20px
+		width 100%
+		& li
+			display inline-block
+			width 4px
+			height 4px
+			line-height 10px
+			margin 0 4px
+			text-indent -999em
+			border 2px solid #fff
+			cursor pointer
+			opacity .3
+			transition background .5s, opacity .5s
+			&.active
+				background #fff
+				opacity .9

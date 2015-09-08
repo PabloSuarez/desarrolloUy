@@ -1,0 +1,50 @@
+/*
+* HEAD
+*/
+.actions
+	color blanco
+	width 25rem
+	position absolute
+	display flex
+	flex-direction row
+	height 100vh
+	font-size 1.5rem
+	& .link
+		color blanco
+	&_main
+		background-color rgba(6, 21, 29, .5)
+		padding 2rem 6rem 1.5rem 1.5rem
+		width 100%
+		& .title
+			font-size 3rem
+
+.item
+	text-transform capitalize
+	margin 1.5rem 0
+
+.menu
+	align-items center
+	margin 1rem 0
+	&-x
+		width 6vw
+		height 5.5vw
+		text-align center
+		font-size 4vw
+		vertical-align middle
+		z-index 10000
+		text-shadow 0 1px 0 #97DBFF,
+					0 2px 0 #61C8FF,
+					0 3px 0 #3EBBFE
+		box-shadow 6px 6px 6px rgba(6, 21, 29, .1),
+				   2px 2px 2px rgba(6, 21, 29, .05)
+		& .active
+			animation 1s slidy
+			transform rotate(90deg)
+			@keyframes slidy
+				0%
+					transform rotate(0deg)
+				100%
+					transform rotate(90deg)
+	&_item
+		border-bottom 2px solid #fff
+

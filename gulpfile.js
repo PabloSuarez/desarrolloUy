@@ -66,7 +66,7 @@ gulp.task('styl', function styl () {
 })
 
 gulp.task('styl:watch', function() {
-  return gulp.watch(['./app/css/stylus/style.styl'], ['styl'])
+  return gulp.watch(['./app/css/stylus/*'], ['styl'])
 })
 
 gulp.task('default', ['js:watch', 'styl:watch'])

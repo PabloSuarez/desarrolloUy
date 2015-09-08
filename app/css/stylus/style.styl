@@ -1,46 +1,15 @@
 @import "./../normalize.css";
 @import "nib"
 
-blanco = #fff
-negro = #000
-gris = nav_bgc
-
-// vars de colores
-html_bgc = #082A41
-
-nav_bgc = #4FA8F8
-nav_color = #fff
-nav_color_border = #8BCAFF
-
-aside_color_border = #0E9BFF
-
-content_color_background = #3296DE
-content_color_title = #A8A8A8
-content_color_content = #BCDDFA
-content_color_link = #FFB74B
-
-borde_lista = #7CA4E7
-
-// medidas
-
-margen = 2%
-margen_nav = 1%
-margen_lista = 2%
-margen_medio = 1vw
-margen_chico = .2vw
-
-border_radius = 4px
-border_radius_conteiner = 8px
-border_comun = 1px solid aside_color_border
-
-mobile = 420px
-tablet = 1050px
-tablet_medio_inferior = 800px
+@import "variables"
+@import "menu"
+@import "banner"
+@import "github"
 
 html
-	background-color: red//html_bgc
-	font-size: 13px
-	font-family: verdana !important
+	background-color html_bgc
+	font-size 13px
+	font-family verdana !important
 
 @media (min-width: 0px) and (max-width:mobile)
 	html
@@ -65,8 +34,6 @@ html
 	@media (min-width: mobile+1) and (max-width:tablet)
 		&
 			width: 90vw
-
-
 
 
 /*
@@ -94,124 +61,6 @@ html
 
 
 
-/*
-* HEAD
-*/
-.actions
-	color blanco
-	width 25rem
-	position absolute
-	display flex
-	flex-direction row
-	height 100vh
-	& .main
-		background-color rgba(6, 21, 29, .5)
-		padding 2rem 6rem 1.5rem 1.5rem
-		& .title
-			font-size 3rem
-
-.menu
-	align-items center
-	&-x
-		width 6vw
-		height 5.5vw
-		background-color rgba(6, 21, 29, .4)
-		text-align center
-		font-size 4vw
-		vertical-align middle
-		z-index 10000
-		text-shadow 0 1px 0 #97DBFF,
-					0 2px 0 #61C8FF,
-					0 3px 0 #3EBBFE
-		box-shadow 6px 6px 6px rgba(6, 21, 29, .1),
-				   2px 2px 2px rgba(6, 21, 29, .05)
-		& .active
-			animation 1s slidy
-			transform rotate(90deg)
-			@keyframes slidy
-				0%
-					transform rotate(0deg)
-				100%
-					transform rotate(90deg)
-	&_item
-		color blanco
-		text-transform capitalize
-		margin 1.5rem 0
-		font-size 1.5rem
-		border-bottom 2px solid #fff
-		cursor: pointer
-		&:hover
-			opacity .9
-
-
-
-
-/*
- * PERFIL
- */
- margen_aside =  margen_medio margen_medio margen_medio 0
-.aside
-	text-align: center
-	margin: margen*2 margen_medio
-	&_title
-		color: nav_color
-	&_img_profile
-		border-radius: border_radius_conteiner
-		max-width: 100%
-	&_border
-		margin: margen_aside
-		border-top: 1px solid aside_color_border
-	&_username
-		margin: margen_aside
-	&_social_link
-		margin: margen_aside
-		text-decoration: none
-		color: nav_color
-	@media (min-width: 0px) and (max-width:mobile)
-		&_info
-			margin: margen_medio 0 margen_medio 0
-			padding: 0 margen_medio 0 margen_medio
-			display: flex
-			flex-direction: row
-			justify-content: space-around
-			background-color: nav_bgc
-			border: border_comun
-			border-radius: border_radius
-
-
-
-
-/*
-* GITHUB
-*/
-.list
-	border: border_comun
-	border-color: nav_bgc
-	border-radius: border_radius
-	margin-bottom: margen_medio
-	&_item
-		&_head
-			padding: margen_medio
-			&_title
-				font-size: 1.5rem
-				text-transform: capitalize
-			&_page
-				&_link
-					text-decoration none
-					color: nav_color_border
-		&_body
-			padding: margen_chico margen_medio margen_chico margen_medio
-			background-color: gris
-			color blanco
-			&_demo
-				margin: margen_chico 0 0 0
-				& a
-					color: content_color_link
-		&_date
-			color: nav_color_border
-			align-self: flex-end
-			font-size: .8rem
-
 
 
 
@@ -227,13 +76,13 @@ html
 	text-decoration none
 
 ul
-	margin: 0
-	padding: 0
-	list-style: none
+	margin 0
+	padding 0
+	list-style none
 
 li
-	margin: 0
-	padding: 0
+	margin 0
+	padding 0
 
 .no_style_link
 	text-decoration: none
@@ -262,7 +111,7 @@ li
 			display none
 
 .clickable
-	cursor: pointer
+	cursor pointer
 
 .section_content
 	margin: margen_medio
@@ -281,9 +130,6 @@ li
 		& h2
 			color nav_bgc
 
-.view_map
-	text-decoration: underline
-
 .left
 	text-align left
 .right
@@ -297,86 +143,3 @@ li
 
 
 
-/* 
-* banner
-*/
-.banner
-	position relative
-	width 100vw
-	overflow auto
-	font-size 18px
-	line-height 24px
-	text-align center
-	color rgba(255,255,255,.9)
-	text-shadow 2px 2px 3px rgba(0,0,0,1)
-	box-shadow 0 1px 2px rgba(0,0,0,.25)
-	& p
-		font-size 1.6rem
-		text-shadow 2px 1px 1px #0A4A82
-	& ul
-		& li
-			height 100vh
-			background-size cover
-			background-position center
-			display block
-			float left
-			width 33%
-			box-shadow inset 0 -3px 6px rgba(0,0,0,.1)
-	& .inner
-		padding 160px 0 110px
-	& h1
-		margin 30vh 0 0 0
-		font-size 3.5rem
-		line-height 52px
-		color rgba(227,242,255,1)
-		text-shadow 0 1px 0 #6CB5F4,
-					0 2px 0 #4DA1EB,
-					0 3px 0 #4F92CD,
-					0 3.5px 0 #3970A0
-		@media (min-width: tablet_medio_inferior +1) and (max-width: tablet)
-			&
-				font-size 5rem
-		@media (min-width: mobile +1) and (max-width: tablet_medio_inferior)
-			&
-				font-size 3.3rem
-		@media (min-width: 0) and (max-width: mobile)
-			&
-				font-size 3rem
-	& h2
-		font-size 2rem
-		line-height 52px
-		color #fff
-	& .btn
-		display inline-block
-		margin 25px 0 0
-		padding 9px 22px 7px
-		clear both
-		color #fff
-		font-size 12px
-		font-weight bold
-		text-transform uppercase
-		text-decoration none
-		border 2px solid rgba(255,255,255,.4)
-		border-radius 5px
-		background-color rgba(156,203,255,.4)
-	& .btn:hover
-		background rgba(255,255,255,.05)
-	& .dots 
-		position absolute
-		right 0
-		bottom 20px
-		width 100%
-		& li
-			display inline-block
-			width 4px
-			height 4px
-			line-height 10px
-			margin 0 4px
-			text-indent -999em
-			border 2px solid #fff
-			cursor pointer
-			opacity .3
-			transition background .5s, opacity .5s
-			&.active
-				background #fff
-				opacity .9
