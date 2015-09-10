@@ -1,50 +1,92 @@
 /*
 * HEAD
 */
+
+
+
+
+/* * Variables */
+font_size_title = 4rem
+font_size_items = 1.5rem
+font_size_small_items = .9rem
+
+margin_item = 1rem
+
+background_color = rgba(6, 21, 29, .9)
+
+color_small_items = #E6E1E1
+/* FIN * */
+
+
 .actions
 	color blanco
-	width 25rem
-	position absolute
-	display flex
-	flex-direction row
-	height 100vh
-	font-size 1.5rem
+	font-size font_size_items
+	position fixed
+	z-index 100
+	display inline-flex
 	& .link
-		color blanco
+		color @color
 	&_main
-		background-color rgba(6, 21, 29, .5)
-		padding 2rem 6rem 1.5rem 1.5rem
-		width 100%
+		width 0px
+		height 100vh
+		background-color background_color
+		overflow hidden
 		& .title
-			font-size 3rem
-
-.item
-	text-transform capitalize
-	margin 1.5rem 0
+			margin 0 0 2rem 0
+			font-size font_size_title
+			position relative
+			animation-name left-in
+			animation-duration .6s
+			&:hover
+				opacity .5
+		&-show
+			padding 2rem 6rem 1.5rem 1.5rem
+			width auto
 
 .menu
-	align-items center
-	margin 1rem 0
-	&-x
-		width 6vw
-		height 5.5vw
-		text-align center
-		font-size 4vw
-		vertical-align middle
-		z-index 10000
-		text-shadow 0 1px 0 #97DBFF,
-					0 2px 0 #61C8FF,
-					0 3px 0 #3EBBFE
-		box-shadow 6px 6px 6px rgba(6, 21, 29, .1),
-				   2px 2px 2px rgba(6, 21, 29, .05)
-		& .active
-			animation 1s slidy
-			transform rotate(90deg)
-			@keyframes slidy
-				0%
-					transform rotate(0deg)
-				100%
-					transform rotate(90deg)
+	margin 1rem 0 2rem
 	&_item
 		border-bottom 2px solid #fff
+		color @color
+		margin 1rem 0
+		padding 0 6rem 0 0
+		position relative
+		animation-name left-in
+		animation-duration .9s
+		&:hover
+			opacity .3
+	&_icon
+		padding 2rem
+		font-size 4rem
+		position fixed
+		background-color rgba(6, 21, 29, .9)
+		&:hover
+			opacity .3
 
+.contact
+	margin 1rem 0 2rem 0
+	&_item
+		color color_small_items
+		font-size font_size_small_items
+		margin .6rem 0
+		position relative
+		animation-name left-in
+		animation-duration 1.2s
+		&:hover
+			opacity .3
+
+
+
+
+/* * ANIMACIONES  */
+@keyframes left-in
+	0%
+		transform rotate(-40deg)
+		left -200px
+	50%
+		transform rotate(-40deg)
+		opacity .4
+	100%
+		left 0px
+
+/* FIN * */

@@ -1,19 +1,38 @@
 <nav class="actions">
-	<div class="actions_main">
-		<a href="#" class="link title">dUy</a>
+	<div class="actions_main" ng-class="{'actions_main-show' : showMenu}">
+		<div class="title"><a href="#" class="link">dUy</a></div>
 		<ul class="menu">
-			<a ng-href="#/" class="link"><li class="menu_item">Inicio</li></a>
-			<a ng-href="#/github" class="link"><li class="menu_item">GitHub</li></a>
-			<a ng-href="#/info" class="link"><li class="menu_item">Info</li></a>
+			<li class="menu_item">
+				<a ng-href="#/" class="link">Inicio</a>
+			</li>
+			<li class="menu_item">
+				<a ng-href="#/github" class="link">GitHub</a>
+			</li>
+			<li class="menu_item">
+				<a ng-href="#/info" class="link">Info</a>
+			</li>
 		</ul>
-		<ul class="contact">
-			<a href="https://www.facebook.com/DesarrolloUy" class="link"><li class="item">Facebook</li></a>
-			<a href="https://github.com/PabloSuarez" class="link"><li class="item">GitHub</li></a>
-			<a href="mailto:hostsuarezpablo@gmail.com?subject=web: profesional" class="link"><li class="item">mail</li></a>
+
+ 		<ul class="contact">
+			<li class="contact_item">
+				<a href="https://www.facebook.com/DesarrolloUy" class="link">Facebook</a>
+			</li>
+			<li class="contact_item">
+				<a href="https://github.com/PabloSuarez" class="link">GitHub</a>
+			</li>
+			<li class="contact_item">
+				<a href="mailto:hostsuarezpablo@gmail.com?subject=web: profesional" class="link">mail</a>
+			</li>
 		</ul>
-	</div>
-	<div class="menu-x">></div>
+  	</div>
+
+  	{{ showMenu | json }}
+
+  	<div class="menu_icon">
+  		<a class="link" href="#" ng-click="!showMenu" >></a>
+  	</div>
 </nav>
+
 
 <script>
 	$(function() {

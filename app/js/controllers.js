@@ -4,6 +4,7 @@
 		.controller('HomeController', ['$scope', HomeController])
 		.controller('GithubController', ['$scope', 'githubService', GithubController])
 		.controller('AboutController', ['$scope', AboutController])
+		.controller('menuController', ['$scope', menuController])
 
 	function HomeController($scope) {
 		console.log('HOME controller LOG')
@@ -19,6 +20,10 @@
 
 	function AboutController($scope) {
 		
+	}
+
+	function menuController($scope) {
+		$scope.showMenu = true
 	}
 
 })()
