@@ -35,13 +35,17 @@ color_small_items = #E6E1E1
 			margin 0 0 2rem 0
 			font-size font_size_title
 			position relative
-			animation-name left-in
-			animation-duration .6s
 			&:hover
 				opacity .5
 		&-show
 			padding 2rem 6rem 1.5rem 1.5rem
 			width auto
+			animation-name left-in
+			animation-duration 4s
+		&-hide
+			width 0px
+			animation-name left-in
+			animation-duration 4s
 
 .menu
 	margin 1rem 0 2rem
@@ -51,12 +55,10 @@ color_small_items = #E6E1E1
 		margin 1rem 0
 		padding 0 6rem 0 0
 		position relative
-		animation-name left-in
-		animation-duration .9s
 		&:hover
 			opacity .3
 	&_icon
-		padding 2rem
+		padding 1.5rem
 		font-size 4rem
 		position fixed
 		background-color rgba(6, 21, 29, .9)
@@ -70,8 +72,6 @@ color_small_items = #E6E1E1
 		font-size font_size_small_items
 		margin .6rem 0
 		position relative
-		animation-name left-in
-		animation-duration 1.2s
 		&:hover
 			opacity .3
 
@@ -81,11 +81,10 @@ color_small_items = #E6E1E1
 /* * ANIMACIONES  */
 @keyframes left-in
 	0%
-		transform rotate(-40deg)
+		opacity .1
 		left -200px
 	50%
-		transform rotate(-40deg)
-		opacity .4
+		opacity .5
 	100%
 		left 0px
 

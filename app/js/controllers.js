@@ -23,7 +23,7 @@
 	}
 
 	function menuController($scope) {
-		$scope.showMenu = true
+		$scope.showMenu = false
 	}
 
 })()

@@ -1,5 +1,5 @@
 <nav class="actions">
-	<div class="actions_main" ng-class="{'actions_main-show' : showMenu}">
+	<div class="actions_main" ng-class="{'actions_main-hide' : !showMenu, 'actions_main-show' : showMenu}">
 		<div class="title"><a href="#" class="link">dUy</a></div>
 		<ul class="menu">
 			<li class="menu_item">
@@ -26,10 +26,8 @@
 		</ul>
   	</div>
 
-  	{{ showMenu | json }}
-
   	<div class="menu_icon">
-  		<a class="link" href="#" ng-click="!showMenu" >></a>
+  		<a class="link clickable" ng-click="showMenu = !showMenu" >></a>
   	</div>
 </nav>
 
