@@ -2,8 +2,7 @@
 * HEAD
 */
 
-
-
+var_animation_duration = 2s
 
 /* * Variables */
 font_size_title = 4rem
@@ -41,11 +40,12 @@ color_small_items = #E6E1E1
 			padding 2rem 6rem 1.5rem 1.5rem
 			width auto
 			animation-name left-in
-			animation-duration 1.5s
+			animation-duration var_animation_duration
 		&-hide
+			opacity .1
 			width 0px
 			animation-name left-in
-			animation-duration 1.5s
+			animation-duration var_animation_duration
 
 .menu
 	margin 1rem 0 2rem
