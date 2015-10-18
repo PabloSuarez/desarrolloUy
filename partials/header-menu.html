@@ -3,22 +3,19 @@
 		<div class="title"><a href="#" class="link">dUy</a></div>
 		<ul class="menu">
 			<li class="menu_item">
-				<a ng-href="#/" class="link">Inicio</a>
+				<a ng-href="#/" class="link">Home</a>
 			</li>
 			<li class="menu_item">
-				<a ng-href="#/github" class="link">GitHub</a>
-			</li>
-			<li class="menu_item">
-				<a ng-href="#/info" class="link">Info</a>
+				<a ng-href="#/github" class="link">Develop zone</a>
 			</li>
 		</ul>
 
  		<ul class="contact">
 			<li class="contact_item">
-				<a href="https://www.facebook.com/DesarrolloUy" class="link">Facebook</a>
+				<a href="https://www.facebook.com/DesarrolloUy" class="link" target="_blank">Facebook</a>
 			</li>
 			<li class="contact_item">
-				<a href="https://github.com/PabloSuarez" class="link">GitHub</a>
+				<a href="https://github.com/PabloSuarez" class="link" target="_blank">GitHub</a>
 			</li>
 			<li class="contact_item">
 				<a href="mailto:hostsuarezpablo@gmail.com?subject=web: profesional" class="link">mail</a>
@@ -27,16 +24,6 @@
   	</div>
 
   	<div class="menu_icon">
-  		<a class="link clickable" ng-click="showMenu = !showMenu" >></a>
+  		<a class="link clickable" ng-click="showMenu = !showMenu">{{showMenu ? '<':'>'}}</a>
   	</div>
 </nav>
-
-
-<script>
-	$(function() {
-		$('.menu-x').on('click', function () {
-			console.log('Entre !')
-			$('#js-menu-items').toggleClass('hidden')
-		})
-	})
-</script>

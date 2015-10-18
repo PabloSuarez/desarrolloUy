@@ -16,7 +16,7 @@ var stylus = require('gulp-stylus')
 var entry = ['./app/js/app.js', './app/js/lib/unslider.js'] //Scripts de entrada
 var args = watchify.args
 args.debug = false //Genera el sourcemap para debuguear
-args.fullPaths = false //Evita el uso de paths absolutos 
+args.fullPaths = false //Evita el uso de paths absolutos
 
 gulp.task('js:watch', function() {
   var w = watchify(browserify(entry, args))
@@ -38,7 +38,7 @@ function createPublishJS(b){
     return b.bundle()
         .pipe(source('bundle.js')) //Nombre del bundle final
         .pipe(buffer())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./js')) //Directorio de destino
 }
 
@@ -55,7 +55,7 @@ function createBundle(b){
 
 
 /*
- * CSS 
+ * CSS
  */
 gulp.task('styl', function styl () {
   console.log('Now create Styl CSS ...')

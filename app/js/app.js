@@ -28,10 +28,6 @@
         templateUrl: 'views/github.html',
         controller: 'GithubController'
       })
-      .when('/info', {
-        templateUrl: 'views/info.html',
-        controller: 'AboutController'
-      })
       .otherwise({
         redirectTo: '/'
       })

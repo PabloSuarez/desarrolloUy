@@ -7,7 +7,6 @@
 		.controller('menuController', ['$scope', menuController])
 
 	function HomeController($scope) {
-		console.log('HOME controller LOG')
 	}
 
 	function GithubController($scope, githubService) {
@@ -19,7 +18,6 @@
 	}
 
 	function AboutController($scope) {
-		
 	}
 
 	function menuController($scope) {

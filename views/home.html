@@ -1,26 +1,51 @@
-<!-- <div class="presentation">
-	<div class="presentation_title">
-		<h1>DesarrolloUy.com</h1>
-	</div>
+<div class="banner" tabindex="1">
+	<ul>
+		<li style="background-image: url('./img/slider/placa_montevideo.jpg');">
+			<h1 class="desktop_only">DesarrolloUy  { web: profesional } </h1>
+			<h1 class="desktop_no">DesarrolloUy <div>{ web: profesional }</div></h1>
+			<p>creamos sitios totalmente únicos basados en las necesidades de cada negocio</p>
+			<p>
+				prefere: {
+					<p class="center">
+						"type": <a class="link link-white" href="https://es.wikipedia.org/wiki/Single-page_application" target="_blank">"SPA"</a>,
+					</p>
+					<p class="center">
+						"mode": <a class="link link-white" href="https://es.wikipedia.org/wiki/Freelance" target="_blank">"Freelance"</a>
+					}</p>
+			</p>
+			<a class="btn" href="mailto:hostsuarezpablo@gmail.com?subject=web: profesional">Contáctenos</a>
+		</li>
+
+		<li style="background-image: url('./img/slider/aeropuerto_uruguay.jpg');">
+			<h1>Open-source. <_//></h1>
+			<p>Todas las tecologías usadas son de código abierto, actuales y con gran comunidad</p>
+			<p>Buscamos estar siempre al día con las necesidades y tendencias</p>
+			<a class="btn" href="//github.com/PabloSuarez?tab=repositories" target="_blank">Contribuir</a>
+		</li>
+
+		<li style="background-image: url('./img/slider/uruguay.jpg');">
+			<h1>Frameworks MVC Frontend y Backend</h1>
+			<p>Nos actualizamos para dar el mejor servicio, webs totalmente responsivas, flexibles, veloces y dinámicas</p>
+			<a class="btn" href="mailto:hostsuarezpablo@gmail.com?subject=ref:desarrolloUy">Contáctenos</a>
+		</li>
+
+		<li style="background-image: url('./img/slider/puerto-montevideo.jpg');">
+			<h1>www.desarrolloUy.com</h1>
+			<p>Desarrollo freelance (remoto), esperamos recibir tu correo para comenzar a trabajar</p>
+			<a class="btn" href="mailto:hostsuarezpablo@gmail.com?subject=ref:desarrolloUy">hostsuarezpablo@gmail.com</a>
+		</li>
+	</ul>
 </div>
 
-<skills-slider></skills-slider>
-
-<div id="js-main" class="flex_container lienzo flex_container-flex-direction-column">
-	<div class="js-aside-content flex_container">
-		<aside class="aside">
-			<div align="center">
-				<img class="aside_img_profile" src="./img/Pablo_Suarez.jpeg" alt="Imagen de perfil Pablo Suarez">
-			</div>
-			<div class="aside_info">
-				<h4 class="aside_username">Pablo Suarez</h4>
-				<div class="aside_border mobile_no"></div>
-				<a class="aside_social_link" href="https://uy.linkedin.com/in/pablosuarezdesarrolloy" target="_blank" alt="Perfil Linkedin">Linkedin</a>
-				<a class="aside_social_link" href="https://github.com/PabloSuarez" target="_blank" alt="Perfil Github">Github</a>
-				<a class="aside_social_link" href="https://www.facebook.com/DesarrolloUy" target="_blank" alt="Perfil Facebook">Facebook</a>
-				<a class="aside_social_link" href="mailto:hostsuarezpablo@gmail.com" alt="Cuenta correo">hostsuarezpablo@gmail.com</a>
-			</div>
-		</aside>
-	</div>
-</div>
- -->
+<script>
+	$(function() {
+		$('.banner').unslider({
+			fluid: true,
+			dots: true,
+			keys: true,
+			delay: 10000,
+			speed: 500,
+			pause: false
+		})
+	})
+</script>

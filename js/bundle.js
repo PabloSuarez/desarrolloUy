@@ -29,10 +29,6 @@
         templateUrl: 'views/github.html',
         controller: 'GithubController'
       })
-      .when('/info', {
-        templateUrl: 'views/info.html',
-        controller: 'AboutController'
-      })
       .otherwise({
         redirectTo: '/'
       })
@@ -51,7 +47,6 @@
 		.controller('menuController', ['$scope', menuController])
 
 	function HomeController($scope) {
-		console.log('HOME controller LOG')
 	}
 
 	function GithubController($scope, githubService) {
@@ -63,7 +58,6 @@
 	}
 
 	function AboutController($scope) {
-		
 	}
 
 	function menuController($scope) {
@@ -90,50 +84,6 @@
         templateUrl: 'partials/skills-slider.html'
       }
     })
-
-    /*
-    .directive('postComments', ['desarrolloUyService', desarrolloUyService])
-    function (desarrolloUyService) {
-      return {
-        restrict: 'E',
-        templateUrl: 'partials/pokemon-comments.html',
-        scope: {
-          name: '@name'
-        },
-        link: function (scope, element, attributes) {
-          attributes.$observe('name', function (value) {
-            if (value) {
-              scope.name = value
-              scope.comments = pokemonService.getComments(value)
-            }
-          })
-        },
-        controller: function ($scope) {
-          $scope.comments = pokemonService.getComments($scope.name)
-          $scope.comment = {}
-          $scope.show = false
-
-          $scope.toggle = function () {
-            $scope.show = !$scope.show
-          }
-
-          $scope.anonymousChanged = function () {
-            if ($scope.comment.anonymous) {
-              $scope.comment.email = ""
-            }
-          }
-
-          $scope.addComment = function () {
-            $scope.comment.date = Date.now()
-            pokemonService.saveComment($scope.name, $scope.comment)
-            $scope.comments = pokemonService.getComments($scope.name)
-            $scope.comment = {}
-          }
-
-        }
-      }
-    }
-    */
 
 })()
 
